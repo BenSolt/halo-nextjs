@@ -63,18 +63,18 @@ export default function HaloPlayerCard({ p }) {
     //   })
 
     const Assasinations =
-        p?.Result?.ArenaStats?.TotalAssassinations
+        p?.Result?.ArenaStats.TotalAssassinations
     const Assists =
-        p?.Result?.ArenaStats?.TotalAssists
+        p?.Result?.ArenaStats.TotalAssists
     const Deaths =
-        p.Result.ArenaStats.TotalDeaths
+        p?.Result?.ArenaStats.TotalDeaths
 
     const GamesLost =
-        p.Result.ArenaStats.TotalGamesLost
+        p?.Result?.ArenaStats.TotalGamesLost
     const GamesWon =
-        p.Result.ArenaStats.TotalGamesWon
+        p?.Result?.ArenaStats.TotalGamesWon
     const GamesTied =
-        p.Result.ArenaStats.TotalGamesTied
+        p?.Result?.ArenaStats.TotalGamesTied
 
 
     // console.log(p)
@@ -84,7 +84,7 @@ export default function HaloPlayerCard({ p }) {
 
             <div className='Gamertag'>
                 {/* GAMER TAG*/}
-                <h2> {p.Id}</h2>
+                <h2> {p?.Id}</h2>
 
                 {/* <h1>{rankcurrent}</h1>  */}
             </div>
