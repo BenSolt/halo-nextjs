@@ -13,7 +13,7 @@ export default function HaloPlayerCard({ p }) {
 
             <div className='Gamertag'>
                 {/* GAMER TAG*/}
-                <h2>NAME{p.Id}</h2>
+                <h2>NAME</h2>
                 <h3 className="rankText">Rank: 151</h3>
                 {/* <h1>{rankcurrent}</h1>  */}
             </div>
