@@ -5,7 +5,7 @@ import HaloRankCard from "./components/HaloRankCard";
 import styles from "../styles/Home.module.css";
 import Link from 'next/link'
 
-function haloRanks() {
+function HaloRanks() {
 
     const [data, setData] = useState([]);
 
@@ -37,4 +37,4 @@ function haloRanks() {
 
 };
 
-export default haloRanks;
+export default HaloRanks;

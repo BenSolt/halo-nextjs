@@ -22,7 +22,7 @@ export default function Home() {
           <Link href="/dogos" className='navItem'>DOGOS</Link>
           <Link href="/haloplayers" className='navItem'>Halo Players</Link>
           <Link href="/haloplayerstest" className='navItem'>Halo Players Test</Link>
-          <Link href="/haloranks" className='navItem'>Halo Ranks</Link>
+          {/* <Link href="/haloranks" className='navItem'>Halo Ranks</Link> */}
         </div>
         <div className={styles.description}>
           <p>
