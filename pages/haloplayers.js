@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 //import axios from "axios";
 import axiosWithAuth from "./utils/axiosWithAuth";
 
-import HaloPlayerCard from "./components/HaloPlayerCard";
+//import HaloPlayerCard from "./components/HaloPlayerCard";
 
 // import NavbarHalo from "../navbar/NavbarHalo";
 // import HaloRankCard from "../haloRanks/HaloRankCard";
