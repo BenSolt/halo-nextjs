@@ -66,10 +66,10 @@ export default function Players2() {
   }, [query]);
 
 
-
   const handleInputChange = event => {
     setQuery(event.target.value);
   };
+  
   return (
     <div>
          

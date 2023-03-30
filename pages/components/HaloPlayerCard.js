@@ -65,7 +65,8 @@ export default function HaloPlayerCard({ p }) {
   const Assasinations =
     p.Result.ArenaStats.TotalAssassinations
   const Assists =
-    p.Result.ArenaStats.TotalAssists
+    p.Result.ArenaStats.TotalAssists ?
+    p.Result.ArenaStats.TotalAssists : null
   const Deaths =
     p.Result.ArenaStats.TotalDeaths
 
@@ -84,15 +85,15 @@ export default function HaloPlayerCard({ p }) {
 
       <div className='Gamertag'>
         {/* GAMER TAG*/}
-        <h1> {p.Id}</h1> 
+        <h2> {p.Id}</h2> 
 
         {/* <h1>{rankcurrent}</h1>  */}
       </div>
 
       <div className="Info">
-        <h2>Experience Rank: {p.Result.SpartanRank}</h2>
-        <h2>Highest Rank: {HighestRankAttained}</h2>
-        <h2>Highest Desg: {HRankAttainedDesign}</h2>
+        <h4>Experience Rank: {p.Result.SpartanRank}</h4>
+        <h4>Highest Rank: {HighestRankAttained}</h4>
+        <h4>Highest Desg: {HRankAttainedDesign}</h4>
 
 
         {/* <img class="tierCard" src="https://content.halocdn.com/media/Default/games/halo-5-guardians/csr/csr_top_array00-783f32318c8c49eda0365c5daa50f5b6.png"></img> */}
@@ -105,28 +106,28 @@ export default function HaloPlayerCard({ p }) {
 
       <div className="Stats1">
         <div className='Textholder'>
-          <h3 className='textgold'>GAMES WON: {GamesWon}</h3>
+          <h6 className='textgold'>GAMES WON: {GamesWon}</h6>
         </div>
         <div className='Textholder'>
-          <h3 className='textgold'>GAMES LOST: {GamesLost}</h3>
+          <h6 className='textgold'>GAMES LOST: {GamesLost}</h6>
         </div>
         <div className='Textholder'>
-          <h3 className='textgold'>GAMES TIED: {GamesTied}</h3>
+          <h6 className='textgold'>GAMES TIED: {GamesTied}</h6>
         </div>
         <div className='Textholder'>
-          <h3 className='textgold'>DEATHS: {Deaths}</h3>
+          <h6 className='textgold'>DEATHS: {Deaths}</h6>
         </div>
       </div>
 
       <div className="Stats2">
         <div className='Textholder'>
-          <h3 className='textgold'>TOTAL KILLS: {TotalKillsPlayer}</h3>
+          <h6 className='textgold'>TOTAL KILLS: {TotalKillsPlayer}</h6>
         </div>
         <div className='Textholder'>
-          <h3 className='textgold'>ASSASINATIONS: {Assasinations}</h3>
+          <h6 className='textgold'>ASSASINATIONS: {Assasinations}</h6>
         </div>
         <div className='Textholder'>
-          <h3 className='textgold'>ASSISTS: {Assists}</h3>
+          <h6 className='textgold'>ASSISTS: {Assists}</h6>
         </div>
       </div>
 
