@@ -84,7 +84,7 @@ export default function HaloPlayerCard({ p }) {
 
             <div className='Gamertag'>
                 {/* GAMER TAG*/}
-                <h2> {p?.Id}</h2>
+                <h2> {p.Id ? p.Id : null}</h2>
 
                 {/* <h1>{rankcurrent}</h1>  */}
             </div>
