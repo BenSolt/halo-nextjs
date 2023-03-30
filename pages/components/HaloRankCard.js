@@ -16,7 +16,7 @@ export default function HaloRank({ h }) {
 
                 {h.tiers.map(h => {
                     return (
-                        <div>
+                        <div key={h.id}>
                             <img className="Tier" src={h.iconImageUrl} alt="rank images" />
                         </div>
                     )
