@@ -18,7 +18,7 @@ export default function HaloPlayerCard({ p }) {
     //  })
 
     const TotalKillsPlayer =
-        p.Result.ArenaStats.TotalKills
+        p?.Result?.ArenaStats?.TotalKills
 
 
     const HighestRankAttained =
@@ -63,9 +63,9 @@ export default function HaloPlayerCard({ p }) {
     //   })
 
     const Assasinations =
-        p.Result.ArenaStats.TotalAssassinations
+        p?.Result?.ArenaStats?.TotalAssassinations
     const Assists =
-        p.Result.ArenaStats.TotalAssists
+        p?.Result?.ArenaStats?.TotalAssists
     const Deaths =
         p.Result.ArenaStats.TotalDeaths
 
@@ -103,29 +103,29 @@ export default function HaloPlayerCard({ p }) {
 
             </div>
 
-            <div className="Stats1">
-                <div className='Textholder'>
+            <div className="Stats">
+                <div className='textHolder'>
                     <h6 className='textgold'>GAMES WON: {GamesWon}</h6>
                 </div>
-                <div className='Textholder'>
+                <div className='textHolder'>
                     <h6 className='textgold'>GAMES LOST: {GamesLost}</h6>
                 </div>
-                <div className='Textholder'>
+                <div className='textHolder'>
                     <h6 className='textgold'>GAMES TIED: {GamesTied}</h6>
                 </div>
-                <div className='Textholder'>
+                <div className='textHolder'>
                     <h6 className='textgold'>DEATHS: {Deaths}</h6>
                 </div>
             </div>
 
-            <div className="Stats2">
-                <div className='Textholder'>
+            <div className="Stats">
+                <div className='textHolder'>
                     <h6 className='textgold'>TOTAL KILLS: {TotalKillsPlayer}</h6>
                 </div>
-                <div className='Textholder'>
+                <div className='textHolder'>
                     <h6 className='textgold'>ASSASINATIONS: {Assasinations}</h6>
                 </div>
-                <div className='Textholder'>
+                <div className='textHolder'>
                     <h6 className='textgold'>ASSISTS: {Assists}</h6>
                 </div>
             </div>

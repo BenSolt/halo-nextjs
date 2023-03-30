@@ -1,77 +1,87 @@
-.PlayerContainer{
+.PlayerContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     /* border: 2px solid black; */
 }
 
-.tierCard{
+.tierCard {
     width: 75px;
 }
 
-.PlayerCard{
-    width: 300px;
+.PlayerCard {
+    width: 350px;
     border: 3px solid black;
     background: rgb(61, 61, 61);
-    margin: 20px;   
-    
+    margin: 20px;
+
 }
 
-.Gamertag{
+.Gamertag {
+    display: flex;
+    justify-content: space-evenly;
     background: rgb(207, 176, 0);
     padding: 2px;
     border-bottom: 3px solid black;
 }
 
+.rankText {
+    padding-top: 5px;
+}
 
 
-.Info{
+
+.Info {
     display: flex;
     background: rgb(204, 133, 0);
     justify-content: space-evenly;
     border-bottom: 2px solid black;
+    padding: 4px;
 }
 
-.Stats1{
+.Stats {
     display: flex;
     justify-content: space-evenly;
+    padding: 4px;
 }
 
-.Stats2{
+.StatsBottom {
     display: flex;
-    justify-content: space-evenly;
+    padding: 4px;
 }
 
+/* .textHolder {
+    border: 2px solid black;
+} */
 
-
-    .textgold{
-    color: rgb(204, 133, 0);
+.textgold {
+    color: rgb(255, 166, 0);
     margin-top: 5px;
-    }
+}
 
-    .h5A{
+.h5A {
     color: white;
     margin-top: -15px;
-    }
+}
 
-    .h5B{
-        color: white;
-        margin-top: -15px;
-        }
+.h5B {
+    color: white;
+    margin-top: -15px;
+}
 
 /*////////////////// SEARCH BAR ///////////////////////////////////////*/
 
-.Searchbar{
+.Searchbar {
     display: flex;
     justify-content: center;
 }
 
-.searchtext{
+.searchtext {
     padding: 8px 0 8px 0;
-   
+
 }
 
-.Input{
+.Input {
     margin: 20px;
     padding: 12px;
     border: 1px solid black;

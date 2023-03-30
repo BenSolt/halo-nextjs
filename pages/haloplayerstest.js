@@ -42,30 +42,8 @@ export default function Players2() {
         'Xtianumbra',
     ]
 
-
-
     const [data, setData] = useState([]);
     const [query, setQuery] = useState("");
-    // const [rankData, setRankData] = useState([]);
-
-    // const aRank = rankData.filter(str => (str.name === "Bronze"))
-
-    //   useEffect((halodataR) => {
-    //     getHaloRankA();
-    // }, [getHaloRankA]);
-
-    useEffect(() => {
-        axiosWithAuth()
-            //.get (`stats/h5/servicerecords/arena?players=${players}`)
-            .get(`https://www.haloapi.com/stats/h5/servicerecords/arena?players=${players}`)
-            .then(res => {
-                const info = res.data.Results.filter(p =>
-                    p.Id.toLowerCase().includes(query.toLowerCase()),
-                );
-                console.log(res.data.Results);
-                setData(info);
-            });
-    }, [query]);
 
     const handleInputChange = event => {
         setQuery(event.target.value);
@@ -90,9 +68,10 @@ export default function Players2() {
                     />
                 </form>
             </div>
+            
             <div className="PlayerContainer">
-                {data.map(p => {
-                    return < HaloPlayerCard key={p.Id} p={p} />
+                {players.map(p => {
+                    return < HaloPlayerCardTest key={p.Id} p={p} />
                 })}
             </div>
         </div>
