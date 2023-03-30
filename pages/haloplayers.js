@@ -69,7 +69,7 @@ export default function Players2() {
   const handleInputChange = event => {
     setQuery(event.target.value);
   };
-  
+
   return (
     <div>
          
@@ -88,9 +88,8 @@ export default function Players2() {
       </div>
     <div className="PlayerContainer">
         {data.map(p => {
-         
-          return < HaloPlayerCard key={p.Id} p={p}/>
-        
+        return <div key={p.Id}>Q </div>
+        //   return < HaloPlayerCard key={p.Id} p={p}/>
         })}
 
       </div>
