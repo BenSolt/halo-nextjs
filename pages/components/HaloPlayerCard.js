@@ -90,7 +90,7 @@ export default function HaloPlayerCard({ p }) {
             </div>
 
             <div className="Info">
-                <h4>Experience Rank: {p.Result.SpartanRank}</h4>
+                <h4>Experience Rank: {p?.Result?.SpartanRank}</h4>
                 <h4>Highest Rank: {HighestRankAttained}</h4>
                 <h4>Highest Desg: {HRankAttainedDesign}</h4>
 

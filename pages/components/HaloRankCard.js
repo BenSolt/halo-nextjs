@@ -9,7 +9,7 @@ export default function HaloRank({ h }) {
 
     return (
         <div>
-            <h2>{h.name}</h2>
+            <h2>{h?.name}</h2>
 
             <div className='TierHolder'>
                 {/* <img  className='Banner'src={h.bannerImageUrl} /> */}
