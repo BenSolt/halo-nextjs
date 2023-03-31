@@ -22,15 +22,15 @@ export default function HaloPlayerCard({ p }) {
 
 
     const HighestRankAttained =
-        p?.Result?.ArenaStats.HighestCsrAttained ?
-            p?.Result?.ArenaStats.HighestCsrAttained.Csr : null
+        p.Result.ArenaStats.HighestCsrAttained ?
+            p.Result.ArenaStats.HighestCsrAttained.Csr : null
 
     // const HRankAttainedTier =
     // p.Result.ArenaStats.HighestCsrAttained.Tier
 
     const HRankAttainedDesign =
-        p?.Result?.ArenaStats.HighestCsrAttained ?
-            p?.Result?.ArenaStats.HighestCsrAttained.DesignationId : null
+        p.Result.ArenaStats.HighestCsrAttained ?
+            p.Result.ArenaStats.HighestCsrAttained.DesignationId : null
 
     // const HRankAttainedPercent =
     // p.Result.ArenaStats.HighestCsrAttained.PrecentToNextTier
@@ -85,15 +85,13 @@ export default function HaloPlayerCard({ p }) {
             <div className='Gamertag'>
                 {/* GAMER TAG*/}
                 <h2> {p?.Id}</h2>
-
+                <h4 className="rankText"> Rank: {p?.Result?.SpartanRank}</h4>
                 {/* <h1>{rankcurrent}</h1>  */}
             </div>
 
             <div className="Info">
-                <h4>Experience Rank: {p?.Result?.SpartanRank}</h4>
                 <h4>Highest Rank: {HighestRankAttained}</h4>
                 <h4>Highest Desg: {HRankAttainedDesign}</h4>
-
 
                 {/* <img class="tierCard" src="https://content.halocdn.com/media/Default/games/halo-5-guardians/csr/csr_top_array00-783f32318c8c49eda0365c5daa50f5b6.png"></img> */}
 
@@ -113,15 +111,19 @@ export default function HaloPlayerCard({ p }) {
                 <div className='textHolder'>
                     <h6 className='textgold'>GAMES TIED: {GamesTied}</h6>
                 </div>
-                <div className='textHolder'>
-                    <h6 className='textgold'>DEATHS: {Deaths}</h6>
-                </div>
             </div>
-
             <div className="Stats">
                 <div className='textHolder'>
                     <h6 className='textgold'>TOTAL KILLS: {TotalKillsPlayer}</h6>
                 </div>
+                <div className='textHolder'>
+                    <h6 className='textgold'>DEATHS: {Deaths}</h6>
+                </div>
+
+            </div>
+
+            <div className="Stats">
+
                 <div className='textHolder'>
                     <h6 className='textgold'>ASSASINATIONS: {Assasinations}</h6>
                 </div>
