@@ -22,15 +22,15 @@ export default function HaloPlayerCard({ p }) {
 
 
     const HighestRankAttained =
-        p.Result.ArenaStats.HighestCsrAttained ?
-            p.Result.ArenaStats.HighestCsrAttained.Csr : null
+        p?.Result?.ArenaStats.HighestCsrAttained ?
+            p?.Result?.ArenaStats.HighestCsrAttained.Csr : null
 
     // const HRankAttainedTier =
     // p.Result.ArenaStats.HighestCsrAttained.Tier
 
     const HRankAttainedDesign =
-        p.Result.ArenaStats.HighestCsrAttained ?
-            p.Result.ArenaStats.HighestCsrAttained.DesignationId : null
+        p?.Result?.ArenaStats.HighestCsrAttained ?
+            p?.Result?.ArenaStats.HighestCsrAttained.DesignationId : null
 
     // const HRankAttainedPercent =
     // p.Result.ArenaStats.HighestCsrAttained.PrecentToNextTier
