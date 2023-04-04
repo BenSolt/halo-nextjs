@@ -53,7 +53,7 @@ export default function HaloPlayerCard({ p }) {
             <div className="info">
                 <div className="infoText">
                     {HighestRankAttained === null ? (<h4>Highest Rank: 0</h4>) : (<h4>Highest Rank: {HighestRankAttained}</h4>)}
-                    {HRankAttainedDesign === null ? (<h4>Highest Desg: 0</h4>) : (<h4>Highest Rank: {HRankAttainedDesign}</h4>)}
+                    {HRankAttainedDesign === null ? (<h4>Highest Desg: 0</h4>) : (<h4>Highest Desg: {HRankAttainedDesign}</h4>)}
                 </div>
 
                 <div>

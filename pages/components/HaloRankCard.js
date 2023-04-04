@@ -10,9 +10,10 @@ export default function HaloRank({ h }) {
     return (
         <div>
             <h2>{h?.name}</h2>
-
+           
             <div className='TierHolder'>
                 {/* <img  className='Banner'src={h.bannerImageUrl} /> */}
+                {h?.name === 'Onyx' ? (<h4>Onyx starts at 1500</h4>) : null}
 
                 {h?.tiers?.map(h => {
                     return (
