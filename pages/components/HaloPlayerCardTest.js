@@ -42,17 +42,18 @@ export default function HaloPlayerCard({ p }) {
                 <div className='textHolder'>
                     <h6 className='textgold'>TOTAL KILLS: 241230</h6>
                 </div>
+                    <div className='textHolder'>
+                    <h6 className='textgold'>DEATHS: 183807</h6>
+                </div>
+              
+            </div>
+
+            <div className="Stats">
                 <div className='textHolder'>
                     <h6 className='textgold'>ASSASINATIONS: 2680</h6>
                 </div>
                 <div className='textHolder'>
                     <h6 className='textgold'>ASSISTS: 144757</h6>
-                </div>
-            </div>
-
-            <div className="StatsBottom">
-                <div className='textHolder'>
-                    <h6 className='textgold'>DEATHS: 183807</h6>
                 </div>
             </div>
             {/* <h6>Total kills Vehic:{TotalKillsV}</h6> */}

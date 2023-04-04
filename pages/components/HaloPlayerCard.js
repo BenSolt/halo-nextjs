@@ -38,8 +38,6 @@ export default function HaloPlayerCard({ p }) {
     // const HRankAttainedRank =
     // p.Result.ArenaStats.HighestCsrAttained.Rank
 
-
-
     // const rankcurrent =
     //   p.Result.ArenaStats.ArenaPlaylistStats.map(p => {
     //     return (
@@ -76,8 +74,13 @@ export default function HaloPlayerCard({ p }) {
     const GamesTied =
         p?.Result?.ArenaStats.TotalGamesTied
 
+    function example() {
+        return condition1 ? value1
+            : condition2 ? value2
+                : condition3 ? value3
+                    : value4;
+    }
 
-    // console.log(p)
     return (
         <div className="PlayerCard">
 
@@ -89,15 +92,33 @@ export default function HaloPlayerCard({ p }) {
                 {/* <h1>{rankcurrent}</h1>  */}
             </div>
 
-            <div className="Info">
-                <h4>Highest Rank: {HighestRankAttained}</h4>
-                <h4>Highest Desg: {HRankAttainedDesign}</h4>
+            <div className="info">
+                <div className="infoText">
+                    <h4>Highest Rank: {HighestRankAttained}</h4>
+                    <h4>Highest Desg: {HRankAttainedDesign}</h4>
+                </div>
 
-                {/* <img class="tierCard" src="https://content.halocdn.com/media/Default/games/halo-5-guardians/csr/csr_top_array00-783f32318c8c49eda0365c5daa50f5b6.png"></img> */}
+
+                {HRankAttainedDesign === 6 ? (
+                    <img className="tierCard" src="https://content.halocdn.com/media/Default/games/halo-5-guardians/csr/csr_top_array00-783f32318c8c49eda0365c5daa50f5b6.png"></img>
+                ) : HRankAttainedDesign === 7 ? (
+                    <img className="tierCard" src="https://content.halocdn.com/media/Default/games/halo-5-guardians/csr/csr_top_array01-3755e5127c9c46368e648d58da44390e.png"></img>
+                ) : HRankAttainedDesign === null ? (
+                    <img className="tierCard" src="https://content.halocdn.com/media/Default/games/halo-5-guardians/csr/unranked_00-61fca949c33f433ba7e7507d97ff130f.png"></img>
+                ) : HRankAttainedDesign === 4 ? (
+                    <img className="tierCard" src="https://content.halocdn.com/media/Default/games/halo-5-guardians/csr/csr_platinum_array01-c8df3dc366ea49209762f9b08189ffa6.png"></img>
+                ) : HRankAttainedDesign === 2 ? (
+                    <img className="tierCard" src="https://content.halocdn.com/media/Default/games/halo-5-guardians/csr/csr_silver_array01-b4739333586340bda2eed6099e630f92.png"></img>
+                ) : (
+                    <img className="tierCard" src="https://content.halocdn.com/media/Default/games/halo-5-guardians/csr/csr_platinum_array01-c8df3dc366ea49209762f9b08189ffa6.png"></img>
+                )
+                }
 
                 {/* {aRank.map(h => {
                   return < HaloRankCard key={h.id} h={h} />
                 })}  */}
+
+
 
             </div>
 
