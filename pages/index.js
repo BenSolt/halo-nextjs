@@ -25,6 +25,22 @@ export default function Home() {
           <Link href="/haloranks" className='navItem'>Halo Ranks</Link>
         </div>
 
+        <div className='homebox'>
+          <div className="text">
+            <h1 className='textwhite'>Microsoft 343 Studios - HALO 5 API </h1>
+            
+            <h3 className='textwhite2'>On navbar click on said link to view data from API.</h3>
+            <ul>
+              <li>Search by Halo Players</li>
+              <li>Search the Halo Ranks</li>
+              <li>Search the Halo Maps</li>
+              <li>Search the Halo Medals</li>
+            </ul>
+            <h4 className='textwhite2'>All data is from Microsoft 343</h4>
+          </div>
+
+        </div>
+
 
       </div>
     </>
