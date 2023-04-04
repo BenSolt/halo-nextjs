@@ -3,12 +3,7 @@ import React from "react";
 // import HaloRankCard from "../haloRanks/HaloRankCard";
 
 
-
 export default function HaloPlayerCard({ p }) {
-
-    // const [rankData, setRankData] = useState([]);
-    // const aRank = rankData.filter(str => (str.name === "Bronze"))
-
 
     // const TotalKillsVehicle = 
     // p.Result.ArenaStats.DestroyedEnemyVehicles.map(p => {
@@ -20,7 +15,6 @@ export default function HaloPlayerCard({ p }) {
     const TotalKillsPlayer =
         p?.Result?.ArenaStats.TotalKills
 
-
     const HighestRankAttained =
         p?.Result?.ArenaStats.HighestCsrAttained ?
             p?.Result?.ArenaStats.HighestCsrAttained.Csr : null
@@ -31,34 +25,6 @@ export default function HaloPlayerCard({ p }) {
     const HRankAttainedDesign =
         p?.Result?.ArenaStats.HighestCsrAttained ?
             p?.Result?.ArenaStats.HighestCsrAttained.DesignationId : null
-
-    // const HRankAttainedPercent =
-    // p.Result.ArenaStats.HighestCsrAttained.PrecentToNextTier
-
-    // const HRankAttainedRank =
-    // p.Result.ArenaStats.HighestCsrAttained.Rank
-
-    // const rankcurrent =
-    //   p.Result.ArenaStats.ArenaPlaylistStats.map(p => {
-    //     return (
-    //       <div>      
-    //         <h5>a:</h5> <h6>{p.PlaylistId}</h6>
-
-    //         {p.MeasurementMatchesLeft}
-
-    //         {p.Csr.map(p => {
-    //           return (
-    //             <div>
-    //               <div>Tier: {p.Tier}</div>
-    //               <div>Desig Id: {p.DesignationId}</div>
-    //               <div>precent: {p.PercentToNextTier}</div>
-    //             </div>
-    //           )
-    //         })}
-
-    //       </div>
-    //     )
-    //   })
 
     const Assasinations =
         p?.Result?.ArenaStats.TotalAssassinations
@@ -73,13 +39,6 @@ export default function HaloPlayerCard({ p }) {
         p?.Result?.ArenaStats.TotalGamesWon
     const GamesTied =
         p?.Result?.ArenaStats.TotalGamesTied
-
-    function example() {
-        return condition1 ? value1
-            : condition2 ? value2
-                : condition3 ? value3
-                    : value4;
-    }
 
     return (
         <div className="PlayerCard">
@@ -133,7 +92,6 @@ export default function HaloPlayerCard({ p }) {
                 <div className='textHolder'>
                     <h6 className='textgold'>DEATHS: {Deaths}</h6>
                 </div>
-
             </div>
 
             <div className="Stats">
