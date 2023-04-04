@@ -18,7 +18,6 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
       <div className="navbarContainer">
-          <Link href="/about" className='navItem'>ABOUT</Link>
           <Link href="/dogos" className='navItem'>DOGOS</Link>
           <Link href="/haloplayers" className='navItem'>Halo Players</Link>
           <Link href="/haloplayerstest" className='navItem'>Halo Players Test</Link>

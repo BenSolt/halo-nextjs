@@ -42,21 +42,16 @@ export default function Players2() {
         'Xtianumbra',
     ]
 
-
-
     const [data, setData] = useState([]);
     const [query, setQuery] = useState("");
-    // const [rankData, setRankData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true)
 
-    // const aRank = rankData.filter(str => (str.name === "Bronze"))
-
-    //   useEffect((halodataR) => {
-    //     getHaloRankA();
-    // }, [getHaloRankA]);
+    useEffect(() => {
+        if (isLoading) return
+    }, [isLoading])
 
     useEffect(() => {
         axiosWithAuth()
-            //.get (`stats/h5/servicerecords/arena?players=${players}`)
             .get(`https://www.haloapi.com/stats/h5/servicerecords/arena?players=${players}`)
             .then(res => {
                 const info = res.data.Results.filter(p =>
@@ -64,6 +59,7 @@ export default function Players2() {
                 );
                 console.log(res.data.Results);
                 setData(info);
+                setIsLoading(false);
             });
     }, [query]);
 
@@ -91,9 +87,15 @@ export default function Players2() {
                 </form>
             </div>
             <div className="PlayerContainer">
+            {isLoading ? (
+                    <div><h2>Loading...</h2></div>
+                ): (
+                <div className="PlayerContainer">
                 {data.map(p => {
                     return < HaloPlayerCard key={p.Id} p={p} />
                 })}
+                </div>
+                )}
             </div>
         </div>
     );

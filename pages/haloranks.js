@@ -8,6 +8,11 @@ import Link from 'next/link'
 function HaloRanks() {
 
     const [data, setData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true)
+
+    useEffect(() => {
+        if (isLoading) return
+    }, [isLoading])
 
     useEffect(() => {
         axiosWithAuth()
@@ -16,6 +21,7 @@ function HaloRanks() {
                 const info = res.data
                 console.log(info);
                 setData(info);
+                setIsLoading(false);
             });
     }, []);
 
@@ -27,9 +33,15 @@ function HaloRanks() {
             <div>AAA</div>
             
             <div className="PlayerContainer">
-            {data.map(h => {
-                return < HaloRankCard key={h.id} h={h} />
-            })}
+                {isLoading ? (
+                    <div>Loading...</div>
+                ): (
+                    <div>
+                    {data.map(h => {
+                        return < HaloRankCard key={h.id} h={h} />
+                    })}
+                    </div>
+                )}
             </div>
         </div>
 
