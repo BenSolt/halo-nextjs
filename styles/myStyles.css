@@ -8,19 +8,19 @@
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
-  background: rgb(197, 168, 1);
-  /* background-color: rgb(82, 82, 82); */
+  /* background: rgb(197, 168, 1); */
+  background-color: rgb(82, 82, 82);
 }
 
 .navItem {
   padding: 15px;
-  background: rgb(197, 168, 1);
-  /* background-color: rgb(82, 82, 82); */
+  background-color: rgb(82, 82, 82);
   color: white;
 }
 
 .navItem:hover {
-  background-color: rgb(42, 42, 42);
+  background-color: rgb(197, 168, 1);
+  /* background-color: rgb(42, 42, 42); */
   color: white;
 }
 
@@ -122,11 +122,6 @@ button:hover {
   margin: 5px;
 }
 
-li {
-  color: white;
-  padding: 2px;
-}
-
 @media only screen and (max-width: 500px) {
   .text {
     padding: 30px;
@@ -152,6 +147,10 @@ li {
   height: 65vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url('../pages/api-halo5.jpg');
+}
+
+li {
+  color: white;
 }
 
 @media only screen and (max-width: 500px) {
