@@ -9,20 +9,12 @@ export default function HaloRank({ h }) {
 
     return (
         <div>
-            {/* <h2>{h?.name}</h2> */}
-            <h2>{h.name}</h2>
+            <h2>{h?.name}</h2>
 
             <div className='TierHolder'>
                 {/* <img  className='Banner'src={h.bannerImageUrl} /> */}
 
-                {/* {h?.tiers?.map(h => {
-                    return (
-                        <div key={h.id}>
-                            <img className="Tier" src={h.iconImageUrl} alt="rank images" />
-                        </div>
-                    )
-                })} */}
-                {h.tiers.map(h => {
+                {h?.tiers?.map(h => {
                     return (
                         <div key={h.id}>
                             <img className="Tier" src={h.iconImageUrl} alt="rank images" />
