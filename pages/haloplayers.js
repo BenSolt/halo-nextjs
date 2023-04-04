@@ -69,13 +69,12 @@ export default function Players2() {
 
     return (
         <div>
-            <div className={styles.navbarContainer}>
+            <div className="navbarContainer">
                 <Link href="/" className='navItem'>HOME</Link>
             </div>
 
             <div className="Searchbar" >
                 <h3 className='searchtext'>Search Player:</h3>
-                <form>
                     <input className="Input"
                         type="text"
                         onChange={handleInputChange}
@@ -84,17 +83,16 @@ export default function Players2() {
                         placeholder="Search player"
                         autoComplete="off"
                     />
-                </form>
             </div>
             <div className="PlayerContainer">
-            {isLoading ? (
+                {isLoading ? (
                     <div><h2>Loading...</h2></div>
-                ): (
-                <div className="PlayerContainer">
-                {data.map(p => {
-                    return < HaloPlayerCard key={p.Id} p={p} />
-                })}
-                </div>
+                ) : (
+                    <div className="PlayerContainer">
+                        {data.map(p => {
+                            return < HaloPlayerCard key={p.Id} p={p} />
+                        })}
+                    </div>
                 )}
             </div>
         </div>

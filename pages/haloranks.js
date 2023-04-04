@@ -27,19 +27,18 @@ function HaloRanks() {
 
     return (
         <div>
-            <div className={styles.navbarContainer}>
+            <div className="navbarContainer">
                 <Link href="/" className='navItem'>HOME</Link>
             </div>
-            <div>AAA</div>
-            
+
             <div className="PlayerContainer">
                 {isLoading ? (
                     <div>Loading...</div>
-                ): (
+                ) : (
                     <div>
-                    {data.map(h => {
-                        return < HaloRankCard key={h.id} h={h} />
-                    })}
+                        {data.map(h => {
+                            return < HaloRankCard key={h.id} h={h} />
+                        })}
                     </div>
                 )}
             </div>

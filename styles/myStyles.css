@@ -1,11 +1,15 @@
 .navbarContainer {
-    display: inherit;
+    /* display: inherit;
     justify-content: inherit;
     align-items: inherit;
     display: inherit;
     justify-content: space-evenly;
-    align-items: inherit;
-    font-size: 0.85rem;
+    align-items: inherit; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1rem;
     max-width: var(--max-width);
     width: 100%;
     z-index: 2;

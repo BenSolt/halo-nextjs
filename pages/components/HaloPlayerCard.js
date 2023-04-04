@@ -84,7 +84,6 @@ export default function HaloPlayerCard({ p }) {
     return (
         <div className="PlayerCard">
 
-
             <div className='Gamertag'>
                 {/* GAMER TAG*/}
                 <h2> {p?.Id}</h2>
@@ -94,10 +93,9 @@ export default function HaloPlayerCard({ p }) {
 
             <div className="info">
                 <div className="infoText">
-                    <h4>Highest Rank: {HighestRankAttained}</h4>
-                    <h4>Highest Desg: {HRankAttainedDesign}</h4>
+                    {HighestRankAttained === null ? (<h4>Highest Rank: 0</h4>) : (<h4>Highest Rank: {HighestRankAttained}</h4>) }
+                    {HRankAttainedDesign === null ? (<h4>Highest Desg: 0</h4>) : (<h4>Highest Rank: {HRankAttainedDesign}</h4>) }
                 </div>
-
 
                 {HRankAttainedDesign === 6 ? (
                     <img className="tierCard" src="https://content.halocdn.com/media/Default/games/halo-5-guardians/csr/csr_top_array00-783f32318c8c49eda0365c5daa50f5b6.png"></img>
@@ -109,17 +107,12 @@ export default function HaloPlayerCard({ p }) {
                     <img className="tierCard" src="https://content.halocdn.com/media/Default/games/halo-5-guardians/csr/csr_platinum_array01-c8df3dc366ea49209762f9b08189ffa6.png"></img>
                 ) : HRankAttainedDesign === 2 ? (
                     <img className="tierCard" src="https://content.halocdn.com/media/Default/games/halo-5-guardians/csr/csr_silver_array01-b4739333586340bda2eed6099e630f92.png"></img>
+                ) : HRankAttainedDesign === 5 ? (
+                    <img className="tierCard" src="https://content.halocdn.com/media/Default/games/halo-5-guardians/csr/csr_diamond_array01-9721d95b267942dcb1edcce6dfc25631.png"></img>
                 ) : (
                     <img className="tierCard" src="https://content.halocdn.com/media/Default/games/halo-5-guardians/csr/csr_platinum_array01-c8df3dc366ea49209762f9b08189ffa6.png"></img>
                 )
                 }
-
-                {/* {aRank.map(h => {
-                  return < HaloRankCard key={h.id} h={h} />
-                })}  */}
-
-
-
             </div>
 
             <div className="Stats">
@@ -152,7 +145,6 @@ export default function HaloPlayerCard({ p }) {
                     <h6 className='textgold'>ASSISTS: {Assists}</h6>
                 </div>
             </div>
-
 
             {/* <h6>Total kills Vehic:{TotalKillsV}</h6> */}
         </div>

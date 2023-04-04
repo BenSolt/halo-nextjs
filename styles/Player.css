@@ -10,10 +10,11 @@
 }
 
 .PlayerCard {
-    width: 350px;
+    width: 300px;
     border: 3px solid black;
     background: rgb(61, 61, 61);
     margin: 20px;
+    border-radius: 8px;
 
 }
 
@@ -23,6 +24,7 @@
     background: rgb(207, 176, 0);
     padding: 2px;
     border-bottom: 3px solid black;
+    border-radius: 5px 5px 0 0;
 }
 
 .rankText {
@@ -77,6 +79,7 @@ h4 {
 .Searchbar {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .searchtext {
