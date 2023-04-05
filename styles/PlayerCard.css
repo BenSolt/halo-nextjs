@@ -5,14 +5,10 @@
     /* border: 2px solid black; */
 }
 
-.tierCard {
-    width: 75px;
-}
-
 .PlayerCard {
     width: 300px;
     border: 3px solid black;
-    background: rgb(101, 101, 101);
+    background: rgb(121, 121, 121);
     margin: 20px;
     border-radius: 8px;
 }
@@ -39,8 +35,17 @@
     align-items: center;
 }
 
+.infoTextGroup {
+    margin: 2px;
+}
+
+.tierCard {
+    width: 65px;
+    margin: 2px;
+}
+ 
 .infoText {
-    margin: 0;
+    margin: 4px;
 }
 
 .Stats {
@@ -59,9 +64,9 @@
     border-bottom: 2px solid black;
 }
 
-.textgold {
+.textStats {
     color: black;
-    margin-top: px;
+    margin: 4px;
 }
 
 h6 {

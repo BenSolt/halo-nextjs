@@ -12,33 +12,35 @@ export default function HaloPlayerCard({ p }) {
     //       )
     //  })
 
-    const TotalKillsPlayer =
-        p?.Result?.ArenaStats.TotalKills
+    const TotalKillsPlayer = p?.Result?.ArenaStats.TotalKills
+    const Assists = p?.Result?.ArenaStats.TotalAssists
+    const Deaths = p?.Result?.ArenaStats.TotalDeaths
 
-    const HighestRankAttained =
-        p?.Result?.ArenaStats.HighestCsrAttained ?
-            p?.Result?.ArenaStats.HighestCsrAttained.Csr : null
+    const KillsAssits = TotalKillsPlayer + Assists
+    const KillDivide = KillsAssits / Deaths * 1
+    let KDA = KillDivide.toFixed(2);
+
+
+    const HighestRankAttained = p?.Result?.ArenaStats.HighestCsrAttained ?
+        p?.Result?.ArenaStats.HighestCsrAttained.Csr : null
 
     // const HRankAttainedTier =
     // p.Result.ArenaStats.HighestCsrAttained.Tier
 
-    const HRankAttainedDesign =
-        p?.Result?.ArenaStats.HighestCsrAttained ?
-            p?.Result?.ArenaStats.HighestCsrAttained.DesignationId : null
+    const HRankAttainedDesign = p?.Result?.ArenaStats.HighestCsrAttained ?
+        p?.Result?.ArenaStats.HighestCsrAttained.DesignationId : null
 
-    const Assasinations =
-        p?.Result?.ArenaStats.TotalAssassinations
-    const Assists =
-        p?.Result?.ArenaStats.TotalAssists
-    const Deaths =
-        p?.Result?.ArenaStats.TotalDeaths
+    const Assasinations = p?.Result?.ArenaStats.TotalAssassinations
 
-    const GamesLost =
-        p?.Result?.ArenaStats.TotalGamesLost
-    const GamesWon =
-        p?.Result?.ArenaStats.TotalGamesWon
-    const GamesTied =
-        p?.Result?.ArenaStats.TotalGamesTied
+    const GamesLost = p?.Result?.ArenaStats.TotalGamesLost
+    const GamesWon = p?.Result?.ArenaStats.TotalGamesWon
+    const GamesTied = p?.Result?.ArenaStats.TotalGamesTied
+
+    const totalHeadShots = p?.Result?.ArenaStats.TotalHeadshots
+    const totalShotsFired = p?.Result?.ArenaStats.TotalShotsFired
+    const totalShotsLanded = p?.Result?.ArenaStats.TotalShotsLanded
+    const accur = totalShotsLanded / totalShotsFired * 100
+    let accuracy = accur.toFixed(0);
 
     return (
         <div className="PlayerCard">
@@ -51,9 +53,9 @@ export default function HaloPlayerCard({ p }) {
             </div>
 
             <div className="info">
-                <div className="infoText">
-                    {HighestRankAttained === null ? (<h4>Highest Rank: 0</h4>) : (<h4>Highest Rank: {HighestRankAttained}</h4>)}
-                    {HRankAttainedDesign === null ? (<h4>Highest Desg: 0</h4>) : (<h4>Highest Desg: {HRankAttainedDesign}</h4>)}
+                <div className="infoTextGroup">
+                    {HighestRankAttained === null ? (<h4 className="infoText">Highest Rank: 0</h4>) : (<h4 className="infoText">Highest Rank: {HighestRankAttained}</h4>)}
+                    {HRankAttainedDesign === null ? (<h4 className="infoText">Highest Desg: 0</h4>) : (<h4 className="infoText">Highest Desg: {HRankAttainedDesign}</h4>)}
                 </div>
 
                 <div>
@@ -77,22 +79,31 @@ export default function HaloPlayerCard({ p }) {
             </div>
 
             <div className="Stats">
-                <h6 className='textgold'>Games Won: {GamesWon}</h6>
-                <h6 className='textgold'>Games Lost: {GamesLost}</h6>
+                <h4 className='textStats'>KDA: {KDA}</h4>
+                <h4 className='textStats'>Accuracy: {accuracy}%</h4>
             </div>
 
             <div className="Stats2">
-                <h6 className='textgold'>Games Tied: {GamesTied}</h6>
+                <h6 className='textStats'>Games Won: {GamesWon}</h6>
+                <h6 className='textStats'>Games Lost: {GamesLost}</h6>
             </div>
 
+            {/* <div className="Stats">
+                <h6 className='textStats'>Total Kills: {TotalKillsPlayer}</h6>
+                <h6 className='textStats'>Assists: {Assists}</h6>
+                <h6 className='textStats'>Deaths: {Deaths}</h6>
+            </div> */}
+
             <div className="Stats3">
-                <h6 className='textgold'>Total Kills: {TotalKillsPlayer}</h6>
-                <h6 className='textgold'>Deaths: {Deaths}</h6>
+                <h6 className='textStats'>Games Tied: {GamesTied}</h6>
+                <h6 className='textStats'>Assasinations: {Assasinations}</h6>
             </div>
 
             <div className="Stats">
-                <h6 className='textgold'>Assasinations: {Assasinations}</h6>
-                <h6 className='textgold'>Assists: {Assists}</h6>
+                <h6 className='textStats'>Head Shots: {totalHeadShots}</h6>
+                {/* <h6 className='textStats'>Shots Fired: {totalShotsFired}</h6>
+                <h6 className='textStats'>Shots Landed: {totalShotsLanded}</h6> */}
+
             </div>
 
             {/* <h6>Total kills Vehic:{TotalKillsV}</h6> */}
