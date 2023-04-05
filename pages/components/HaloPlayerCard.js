@@ -41,7 +41,7 @@ export default function HaloPlayerCard({ p }) {
     let accuracy = accur.toFixed(0);
 
     return (
-        <div className="playerCard">
+        <div className="cardPlayer">
 
             <div className='gamertag'>
                 {/* GAMER TAG*/}
