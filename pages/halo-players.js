@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import axiosWithAuth from "./utils/axiosWithAuth";
 
 import HaloPlayerCard from "./components/HaloPlayerCard";
-import HaloPlayerCardTest from "./components/HaloPlayerCardTest";
 
 // import NavbarHalo from "../navbar/NavbarHalo";
 // import HaloRankCard from "../haloRanks/HaloRankCard";

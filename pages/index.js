@@ -30,7 +30,7 @@ export default function Home() {
           <div className="text">
             <h1 className='textwhite'>Microsoft 343 Studios - HALO 5 API </h1>
             
-            <h3 className='textwhite2'>On navbar click on said link to view data from API.</h3>
+            <h3 className='textwhite2'>On the navbar, click on said link to view data from API.</h3>
             <ul>
               <li>Search by Halo Players</li>
               <li>Search the Halo Ranks</li>

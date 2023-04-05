@@ -1,7 +1,5 @@
 import React from "react";
 
-// import HaloRankCard from "../haloRanks/HaloRankCard";
-
 
 export default function HaloPlayerCard({ p }) {
 
