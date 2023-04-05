@@ -31,13 +31,13 @@ function HaloMaps() {
                 <Link href="/" className='navItem'>HOME</Link>
             </div>
 
-            <h2 className="Title">Halo 5 Medals</h2>
+            <h2 className="title">Halo 5 Medals</h2>
 
             <div>
                 {isLoading ? (
                     <div>Loading...</div>
                 ) : (
-                    <div  className="CardContainer">
+                    <div  className="cardContainer">
                         {data.map(m => {
                             return < HaloMedalCard key={m.id} m={m} />
                         })}

@@ -72,7 +72,7 @@ export default function Players2() {
                 <Link href="/" className='navItem'>HOME</Link>
             </div>
             
-            <h2 className="Title">Halo 5 Players</h2>
+            <h2 className="title">Halo 5 Players</h2>
 
             <div className="Searchbar" >
                 <h3 className='searchtext'>Search Player:</h3>
@@ -89,7 +89,7 @@ export default function Players2() {
                 {isLoading ? (
                     <div><h2>Loading...</h2></div>
                 ) : (
-                    <div className="CardContainer">
+                    <div className="cardContainer">
                         {data.map(p => {
                             return < HaloPlayerCard key={p.Id} p={p} />
                         })}

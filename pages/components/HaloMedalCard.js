@@ -4,7 +4,7 @@ import React from "react";
 export default function HaloMedalCard({ m }) {
 
     return (
-        <div className="Card">
+        <div className="card">
 
             <h3>{m.name}</h3>
             <h6>{m.description}</h6>

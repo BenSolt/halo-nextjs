@@ -31,9 +31,9 @@ function HaloRanks() {
                 <Link href="/" className='navItem'>HOME</Link>
             </div>
 
-            <h2 className="Title">Halo 5 Ranks</h2>
+            <h2 className="title">Halo 5 Ranks</h2>
 
-            <div className="PlayerContainer">
+            <div className="cardContainer">
                 {isLoading ? (
                     <div>Loading...</div>
                 ) : (

@@ -31,7 +31,7 @@ function HaloMaps() {
                 <Link href="/" className='navItem'>HOME</Link>
             </div>
             
-            <h2 className="Title">Halo 5 Maps</h2>
+            <h2 className="title">Halo 5 Maps</h2>
 
             <div className="MapContainer" >
                 <button className='Btn' onClick={() => (console.log('arena'))}>Arena Maps</button>
@@ -41,7 +41,7 @@ function HaloMaps() {
                 {isLoading ? (
                     <div>Loading...</div>
                 ) : (
-                    <div className="CardContainer">
+                    <div className="cardContainer">
                         {data.map(m => {
                             return < HaloMapCard key={m.id} m={m} />
                         })}

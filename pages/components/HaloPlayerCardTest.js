@@ -8,10 +8,9 @@ export default function HaloPlayerCard({ p }) {
 
 
     return (
-        <div className="PlayerCard">
+        <div className="playerCard">
 
-
-            <div className='Gamertag'>
+            <div className='gamertag'>
                 {/* GAMER TAG*/}
                 <h2>NAME</h2>
                 <h3 className="rankText">Rank: 151</h3>
