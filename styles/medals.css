@@ -1,0 +1,33 @@
+.sprite {
+    height: 74px;
+    width: 74px;  
+    border: 2px solid black;   
+}
+
+.carrierProtected {
+    object-position: -518px -148px;
+    height: 74px;
+    width: 74px;  
+    border: 2px solid black;   
+}
+
+.carrierKill {
+    object-position: -148px -740px;
+    height: 74px;
+    width: 74px;  
+    border: 2px solid black;   
+}
+
+.oddballKill {
+    object-position: -1924px -666px;
+    height: 74px;
+    width: 74px;  
+    border: 2px solid black;   
+}
+
+.killspree {
+    object-Position: -1924px -74px;
+    height: 74px;
+    width: 74px;  
+    border: 2px solid black;   
+}

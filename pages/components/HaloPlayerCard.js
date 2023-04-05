@@ -108,6 +108,5 @@ export default function HaloPlayerCard({ p }) {
 
             {/* <h6>Total kills Vehic:{TotalKillsV}</h6> */}
         </div>
-
     )
 }

@@ -72,6 +72,8 @@ export default function Players2() {
             <div className="navbarContainer">
                 <Link href="/" className='navItem'>HOME</Link>
             </div>
+            
+            <h2 className="Title">Halo 5 Players</h2>
 
             <div className="Searchbar" >
                 <h3 className='searchtext'>Search Player:</h3>
@@ -84,11 +86,11 @@ export default function Players2() {
                         autoComplete="off"
                     />
             </div>
-            <div className="PlayerContainer">
+            <div>
                 {isLoading ? (
                     <div><h2>Loading...</h2></div>
                 ) : (
-                    <div className="PlayerContainer">
+                    <div className="CardContainer">
                         {data.map(p => {
                             return < HaloPlayerCard key={p.Id} p={p} />
                         })}

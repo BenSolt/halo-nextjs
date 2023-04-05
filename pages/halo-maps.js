@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axiosWithAuth from "./utils/axiosWithAuth";
 
-import HaloRankCard from "./components/HaloRankCard";
+import HaloMapCard from "./components/HaloMapCard";
 import styles from "../styles/Home.module.css";
 import Link from 'next/link'
 
-function HaloRanks() {
+function HaloMaps() {
 
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true)
@@ -16,7 +16,7 @@ function HaloRanks() {
 
     useEffect(() => {
         axiosWithAuth()
-            .get('https://www.haloapi.com/metadata/h5/metadata/csr-designations')
+            .get('https://www.haloapi.com/metadata/h5/metadata/maps')
             .then(res => {
                 const info = res.data
                 console.log(info);
@@ -30,22 +30,26 @@ function HaloRanks() {
             <div className="navbarContainer">
                 <Link href="/" className='navItem'>HOME</Link>
             </div>
+            
+            <h2 className="Title">Halo 5 Maps</h2>
 
-            <div className="PlayerContainer">
+            <div className="MapContainer" >
+                <button className='Btn' onClick={() => (console.log('arena'))}>Arena Maps</button>
+                <button className='Btn' >Warzone Maps</button>
+            </div>
+            <div>
                 {isLoading ? (
                     <div>Loading...</div>
                 ) : (
-                    <div>
-                        {data.map(h => {
-                            return < HaloRankCard key={h.id} h={h} />
+                    <div className="CardContainer">
+                        {data.map(m => {
+                            return < HaloMapCard key={m.id} m={m} />
                         })}
                     </div>
                 )}
             </div>
         </div>
-
     )
-
 };
 
-export default HaloRanks;
+export default HaloMaps;

@@ -1,4 +1,4 @@
-.PlayerContainer {
+.CardContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -9,8 +9,21 @@
     width: 300px;
     border: 3px solid black;
     background: rgb(121, 121, 121);
-    margin: 20px;
+    margin: 10px;
     border-radius: 8px;
+}
+
+.Card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    width: 280px;
+    height: auto;
+    margin: 10px;
+    background: gray;
+    border-radius: 8px;
+    align-items: center;
 }
 
 .Gamertag {

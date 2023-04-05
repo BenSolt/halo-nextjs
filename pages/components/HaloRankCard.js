@@ -9,11 +9,12 @@ export default function HaloRank({ h }) {
 
     return (
         <div>
-            <h2>{h?.name}</h2>
+            <h4 className="Title">{h?.name}</h4>
            
             <div className='TierHolder'>
                 {/* <img  className='Banner'src={h.bannerImageUrl} /> */}
                 {h?.name === 'Onyx' ? (<h4>Onyx starts at 1500</h4>) : null}
+                {h?.name === 'Champion' ? (<h4>First 200 Onyx players</h4>) : null}
 
                 {h?.tiers?.map(h => {
                     return (
