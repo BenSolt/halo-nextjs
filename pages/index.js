@@ -19,7 +19,6 @@ export default function Home() {
       <div>
         <div className="navbarContainer">
           <Link href="/" className='navItem'>HOME</Link>
-          {/* <Link href="/dogos" className='navItem'>DOGOS</Link> */}
           <Link href="/halo-players" className='navItem'>Halo Players</Link>
           <Link href="/halo-ranks" className='navItem'>Halo Ranks</Link>
           <Link href="/halo-maps" className='navItem'>Halo Maps</Link>
