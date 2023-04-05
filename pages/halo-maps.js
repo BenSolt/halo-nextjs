@@ -33,7 +33,7 @@ function HaloMaps() {
             
             <h2 className="title">Halo 5 Maps</h2>
 
-            <div className="MapContainer" >
+            <div className="mapContainer" >
                 <button className='Btn' onClick={() => (console.log('arena'))}>Arena Maps</button>
                 <button className='Btn' >Warzone Maps</button>
             </div>
